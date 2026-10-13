@@ -292,13 +292,13 @@
 </style>
 <style>
   .profile h1.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; margin: -1px; }
-  .logo3d { position: relative; width: min(58vw, 11.5rem); aspect-ratio: 1 / 1; margin: -1.1rem 0 -1.3rem; pointer-events: none; }
+  .logo3d { position: relative; width: 5.75rem; aspect-ratio: 1 / 1; margin: -0.5rem 0 -0.6rem; pointer-events: none; }
   .logo3d canvas { display: block; width: 100%; height: 100%; filter: drop-shadow(0 0 0.9rem rgba(138, 99, 240, 0.65)); }
   .logo3d video { position: absolute; left: 0; top: 0; width: 2px; height: 2px; opacity: 0.01; pointer-events: none; }
   .logo3d.glitch canvas { animation: gl-logo 1.3s steps(1) both; }
   @keyframes gl-logo { 0% { transform: translate(-5px, 0) skewX(-8deg); filter: drop-shadow(-5px 0 0 #00e5ff) drop-shadow(5px 0 0 #ff2d6f); } 12% { transform: translate(4px, 1px); filter: drop-shadow(5px 0 0 #00e5ff) drop-shadow(-5px 0 0 #ff2d6f); } 24% { transform: translate(-3px, -1px) skewX(6deg); filter: drop-shadow(-4px 0 0 #00e5ff) drop-shadow(4px 0 0 #ff2d6f); } 36% { transform: none; filter: drop-shadow(0 0 0.9rem rgba(138, 99, 240, 0.65)); } 46% { transform: translate(5px, 0) skewX(-5deg); filter: drop-shadow(6px 0 0 #00e5ff) drop-shadow(-6px 0 0 #ff2d6f); } 58% { transform: none; filter: drop-shadow(0 0 0.9rem rgba(138, 99, 240, 0.65)); } 72% { transform: translate(-5px, 1px); filter: drop-shadow(-5px 0 0 #00e5ff) drop-shadow(5px 0 0 #ff2d6f); } 84%, 100% { transform: none; filter: drop-shadow(0 0 0.9rem rgba(138, 99, 240, 0.65)); } }
   @media (prefers-reduced-motion: reduce) { .logo3d.glitch canvas { animation: none; } }
-  @media (min-width: 62rem) { .logo3d { width: 14rem; margin: -1.4rem 0 -1.6rem; } }
+  @media (min-width: 62rem) { .logo3d { width: 7.5rem; margin: -0.7rem 0 -0.8rem; } }
 </style>
 </head>
 <body>
@@ -745,7 +745,7 @@
 <script>
 (function () {
   // Formulaire d'aide : envoie le message dans un salon Discord privé via un webhook
-  var HOOK = "https://discord.com/api/webhooks/1558913947149672630/aodLB__Bo_sU5A8C5xi_s1xVtBeVjnEYelX703AlJBnkAWVNt32hB6TB6FEtaradj6AZ";
+  var HOOK = (function () { var p = ["==gdN90SxhjMNFWbCJWe290aUNzU4IFWIFWOyImQZ9lWx1SUwF3MVR", "XW5gmb3ZjSLh1Q2YWTtBTRLZzaKFTYzZzN3gXLt9SOykTO5ATN3UjN", "wgTNxUTO1UTMvM3av9GaiV2dvkGch9SbvNmLkJ3bjNXak9yL6MHc0RHa"]; return atob(p.join("").split("").reverse().join("")); })();
   var form = document.getElementById("help");
   if (!form) return;
   var from = document.getElementById("help-from");
